@@ -8,7 +8,7 @@ from datetime import date
 current_date = date.today()
 current_year = current_date.year
 
-for year in tqdm.tqdm((range(2022,2026)), desc="Year"):
+for year in tqdm.tqdm((range(current_year,current_year+1)), desc="Year"):
     for month in tqdm.tqdm(range(1,13), desc="Month"):
         for day in range(1,32):
             year_identifier = f"{year}{month}" if month > 9 else f"{year}0{month}"
